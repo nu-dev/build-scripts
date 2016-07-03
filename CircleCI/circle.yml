@@ -1,0 +1,18 @@
+machine:
+  environment:
+    USER_NAME: <insert user's name here>
+    USER_EMAIL: <insert user's email here>
+
+database:
+  pre:
+   - ./ghpublish.sh
+
+test:
+  post:
+    - echo ""
+
+deployment:
+    production:
+        branch: master
+        commands:
+         - echo ""
